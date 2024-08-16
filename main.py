@@ -26,6 +26,7 @@ async def get_random_fact(id: int = None):
         return {'message': 'Fact not found'}
     return random.choice(facts)
 
+# Endpoint to get specified fact by id
 @app.get('/fact/{id}')
 async def get_fact_by_id(id: int):
     for fact in facts:
